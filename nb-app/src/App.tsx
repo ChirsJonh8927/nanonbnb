@@ -129,7 +129,7 @@ const App: React.FC = () => {
       <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-950/50 px-6 py-4 backdrop-blur-md z-10 transition-colors duration-200">
         <div className="flex items-center gap-3">
           <a 
-            href="https://api.kuai.host" 
+            href="https://kejiben.fun" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center overflow-hidden hover:opacity-80 transition-opacity"
@@ -137,9 +137,9 @@ const App: React.FC = () => {
              <img src="/kuai.svg" alt="Logo" className="h-full w-full object-cover" />
           </a>
           <div className="hidden sm:block">
-            <h1 className="text-lg font-bold tracking-tight text-amber-600 dark:text-amber-400">NB Nano Banana</h1>
+            <h1 className="text-lg font-bold tracking-tight text-amber-600 dark:text-amber-400">NextBrush智能绘图</h1>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              由 <a href="https://api.kuai.host" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 hover:underline transition-colors">酷爱API</a> 赞助联合开发
+              AI智能绘图新体验
             </p>
           </div>
         </div>
