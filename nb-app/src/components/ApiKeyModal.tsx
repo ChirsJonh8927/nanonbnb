@@ -69,7 +69,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ onClose }) => {
             rel="noopener noreferrer"
             className="flex items-center text-m text-gray-500 hover:text-amber-600 dark:hover:text-amber-400 transition"
           >
-            点击这里注册后即可获取新的API密钥
+            点击这里注册，即可获取新的独立API密钥。
             <ExternalLink className="ml-1 h-3 w-3" />
           </a>
         </p>
