@@ -189,17 +189,6 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ onClose }) => {
           </button>
         </form>
 
-        <div className="mt-6 flex justify-center">
-          <a 
-            href="https://cnb.cool/fuliai/comfyui/-/issues/11" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center text-sm text-gray-500 hover:text-amber-600 dark:hover:text-amber-400 transition"
-          >
-            <span>加入交流群</span>
-            <ExternalLink className="ml-1 h-3 w-3" />
-          </a>
-        </div>
       </div>
     </div>
   );
