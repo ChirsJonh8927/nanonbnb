@@ -59,7 +59,7 @@ export const useAppStore = create<AppState>()(
         enableThinking: false,
         streamResponse: true,
         customEndpoint: 'https://api.kejiben.fun',
-        modelName: 'null',
+        modelName: '输入你想要使用的大模型名称',
         theme: 'system',
       },
       messages: [],
