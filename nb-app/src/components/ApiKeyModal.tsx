@@ -64,12 +64,12 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ onClose }) => {
         <p className="mb-8 text-center text-gray-500 dark:text-gray-400">
           获取API Key：
           <a 
-            href="https://api.kuai.host/register?aff=z2C8" 
+            href="https://api.kejiben.fun" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center text-m text-gray-500 hover:text-amber-600 dark:hover:text-amber-400 transition"
           >
-            注册登录酷爱API后创建分组为【限时特价】的api密钥即可。
+            点击这里获取API密钥。
             <ExternalLink className="ml-1 h-3 w-3" />
           </a>
         </p>
@@ -116,7 +116,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ onClose }) => {
                       value={endpoint}
                       onChange={(e) => setEndpoint(e.currentTarget.value)}
                       className="w-full rounded-md bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:border-amber-500 focus:outline-none"
-                      placeholder="https://api.kuai.host"
+                      placeholder="https://api.kejiben.fun"
                     />
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ onClose }) => {
                       value={model}
                       onChange={(e) => setModel(e.currentTarget.value)}
                       className="w-full rounded-md bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:border-amber-500 focus:outline-none"
-                      placeholder="gemini-3-pro-image-preview"
+                      placeholder="输入你想要使用的大模型名称"
                     />
                   </div>
 
