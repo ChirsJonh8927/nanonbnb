@@ -149,38 +149,28 @@ export const SettingsPanel: React.FC = () => {
           <label className="block text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 mb-2 sm:mb-3">图像分辨率</label>
           <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
             {(['1K', '2K', '4K'] as const).map((res) => {
-              // 只有 gemini-3-pro-image-preview 支持分辨率选择
-              const isResolutionSupported = (settings.modelName || 'gemini-3-pro-image-preview') === 'gemini-3-pro-image-preview';
-              const isDisabled = !isResolutionSupported;
 
               return (
                 <button
                   key={res}
                   onClick={() => {
-                    if (isDisabled) return;
                     if (res === '2K' || res === '4K') {
                       updateSettings({ resolution: res, streamResponse: false });
                     } else {
                       updateSettings({ resolution: res });
                     }
                   }}
-                  disabled={isDisabled}
                   className={`rounded-lg border px-2 py-1.5 sm:px-3 sm:py-2 text-xs sm:text-sm font-medium transition ${
                     settings.resolution === res
                       ? 'border-amber-500 bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400'
                       : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-700'
-                  } ${isDisabled ? 'opacity-40 cursor-not-allowed hover:border-gray-200 dark:hover:border-gray-800' : ''}`}
+                  } `}
                 >
                   {res}
                 </button>
               );
             })}
           </div>
-          {(settings.modelName || 'gemini-3-pro-image-preview') !== 'gemini-3-pro-image-preview' && (
-            <p className="text-[10px] sm:text-xs text-gray-400 dark:text-gray-500 mt-1.5 sm:mt-2">
-              ⚠️ 当前模型不支持分辨率选择，仅 Gemini 3 Pro 支持此功能
-            </p>
-          )}
         </section>
 
         {/* Model Selection */}
@@ -188,9 +178,9 @@ export const SettingsPanel: React.FC = () => {
           <label className="block text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 mb-2 sm:mb-3">模型选择</label>
           <div className="space-y-2">
             {([
-              { name: 'gemini-3-pro-image-preview', label: 'Gemini 3 Pro' },
-              { name: 'gemini-2.5-flash-image-preview', label: 'Gemini 2.5 Flash (Preview)' },
-              { name: 'gemini-2.5-flash-image', label: 'Gemini 2.5 Flash' }
+              { name: 'nano-banana-2', label: 'nano-banana-2' },
+              { name: 'nano-banana-pro', label: 'nano-banana-pro' },
+              { name: 'nano-banana', label: 'nano-banana' }
             ] as const).map((model) => {
               const isActive = (settings.modelName || 'gemini-3-pro-image-preview') === model.name;
               return (
