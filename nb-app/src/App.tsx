@@ -159,25 +159,6 @@ const App: React.FC = () => {
               </div>
           )}
 
-          {installPrompt && (
-            <button
-              onClick={handleInstallClick}
-              className="flex rounded-lg p-2 text-amber-600 dark:text-amber-400 transition hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500"
-              title="安装应用"
-            >
-              <Download className="h-6 w-6 animate-attract" />
-            </button>
-          )}
-          <a
-            href="https://github.com/aigem/nbnb"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-lg p-2 text-gray-500 dark:text-gray-400 transition hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
-            title="GitHub 仓库"
-          >
-            <Github className="h-6 w-6 animate-heartbeat-mixed group-hover:animate-none" />
-          </a>
-
           {/* API Key button - Always visible for setting/changing key */}
           <button
             onClick={() => setShowApiKeyModal(true)}
