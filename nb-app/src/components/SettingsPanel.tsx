@@ -178,9 +178,9 @@ export const SettingsPanel: React.FC = () => {
           <label className="block text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 mb-2 sm:mb-3">模型选择</label>
           <div className="space-y-2">
             {([
-              { name: 'nano-banana-2', label: 'nano-banana-2' },
-              { name: 'nano-banana-pro', label: 'nano-banana-pro' },
-              { name: 'nano-banana', label: 'nano-banana' }
+              { name: 'gemini-3.1-flash-image-preview', label: 'gemini-3.1-flash-image-preview' },
+              { name: 'gemini-3-pro-image-preview', label: 'gemini-3-pro-image-preview' },
+              { name: 'gemini-2.5-flash-image', label: 'gemini-2.5-flash-image' }
             ] as const).map((model) => {
               const isActive = (settings.modelName || 'gemini-3-pro-image-preview') === model.name;
               return (
@@ -355,7 +355,7 @@ export const SettingsPanel: React.FC = () => {
 
         {/* Info */}
         <div className="mt-1 pb-2 sm:pb-4 text-center text-[9px] sm:text-[10px] text-gray-400 dark:text-gray-600 space-y-0.5 sm:space-y-1">
-           <p>模型: {settings.modelName || 'gemini-3-pro-image-preview'}</p>
+           <p>模型: {settings.modelName || 'gemini-3.1-flash-image-preview'}</p>
            <p className="truncate px-4">接口地址: {settings.customEndpoint || 'https://api.kejiben.fun'}</p>
         </div>
       </div>
